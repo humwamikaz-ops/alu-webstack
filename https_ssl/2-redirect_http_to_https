@@ -21,7 +21,7 @@ frontend http-in
     http-request redirect scheme https code 301 unless { ssl_fc }
 
 frontend https-in
-    bind *:443 ssl crt /etc/haproxy/certs/www.yourdomain.tech.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.honorforge.tech.pem
     http-request set-header X-Forwarded-Proto https
     default_backend web-backend
 
